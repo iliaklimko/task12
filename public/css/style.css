@@ -44,61 +44,174 @@ body {
     justify-content: center;
 }
 
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    overflow: auto;
+}
+
+.popup {
+    top: 25%;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    margin: auto;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+    position: absolute;
+    padding: 15px 20px;
+    border: 1px solid #383838;
+    background: #FFF5EE;
+    z-index: 1000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}
+
+
+.close {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgba(0, 131, 119, 0.9);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    outline: none;
+
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+/* кнопка закрытия при наведении */
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+}
+
+.h2-popup {
+    text-align: center;
+    color: #FF0000;
+}
+
+.p-popup {
+    color: #FF0000;
+    font-weight: 700;
+}
+
+.p2-popup {
+    margin-top: 40px;
+    font-weight: 700;
+    color: #FF0000;
+    text-align: justify;
+}
+
+.h3-popup {
+    text-align: left;
+    font-weight: 200;
+    color: #DC143C;
+}
+
+.love-2 {
+    text-align: left;
+}
+
 * {
     box-sizing: border-box;
 }
 
-/* Разместите контейнер изображения (необходимо разместить стрелки влево и вправо) */
-.container {
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.media {
+    max-width: 450px;
+    max-height: 600px;
+    overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Скрыть изображения по умолчанию */
-.mySlides {
-    display: none;
+.media img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Добавить указатель при наведении курсора на миниатюры изображений */
-.cursor {
-    cursor: pointer;
-}
-
-/* Next & prev кнопки */
-.prev,
-.next {
-    cursor: pointer;
+.layer {
+    opacity: 0;
     position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 90%;
+    background: #fff;
+    color: #151e3f;
+    transition: all 0.9s ease;
+    p {
+        transition: all 0.9s ease;
+        transform: scale(0.1);
+    }
 }
 
-/* Разместите кнопку "next" справа */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+p {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
 
-/* При наведении добавьте черный цвет фона с небольшой прозрачностью */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Числовой текст (1/3 и т.д.) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+.media:hover .layer {
+    opacity: 0.8;
+    width: 90%;
+    transition: all 0.5s ease;
+    p {
+        transform: scale(1);
+        transition: all 0.9s ease;
+    }
 }
 
 /* Контейнер для текста изображения */
