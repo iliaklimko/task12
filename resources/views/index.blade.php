@@ -1,6 +1,6 @@
 @extends('layout')
 @section('main_content')
-
+    <audio src="{{ asset('/music/m.mp3') }}"></audio>
 <section class="hero-section set-bg" data-setbg="{{ asset('/img/background.png') }}">
     <div class="container">
         <div class="row">
@@ -361,11 +361,5 @@
 </div>
 
 @extends('popap')
-
-
-<script type="text/javascript">
-    var delay_popup = 0;
-    setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
-</script>
 
 @endsection

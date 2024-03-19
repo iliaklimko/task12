@@ -30,6 +30,17 @@
             var mixer = mixitup(containerEl);
         }
 
+        var delay_popup = 0;
+        setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+    });
+
+    $(document).ready(function() {
+        $(".closePopup").click(function(){
+            const audio = document.querySelector("audio");
+            console.log(audio)
+            audio.volume = 1;
+            audio.play();
+        });
     });
 
     /*------------------

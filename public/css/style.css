@@ -61,7 +61,7 @@ body {
 }
 
 .popup {
-    top: 25%;
+    top: 3%;
     left: 0;
     right: 0;
     font-size: 14px;
@@ -346,6 +346,7 @@ ol {
 
 .section-1 {
     font-style: oblique;
+    text-align: justify;
 }
 
 .spad {
