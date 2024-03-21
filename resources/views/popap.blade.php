@@ -1,3 +1,4 @@
+@if($isBirthdayLera)
 <div id="overlay">
     <div class="popup">
         <h2 class="h2-popup">Внимание!</h2>
@@ -12,3 +13,4 @@
         <button class="close closePopup" title="Закрыть" onclick="document.getElementById('overlay').style.display='none';"></button>
     </div>
 </div>
+@endif

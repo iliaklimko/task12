@@ -1,6 +1,6 @@
 @extends('layout')
 @section('main_content')
-    <audio src="{{ asset('/music/m.mp3') }}"></audio>
+
 <section class="hero-section set-bg" data-setbg="{{ asset('/img/background.png') }}">
     <div class="container">
         <div class="row">
@@ -62,7 +62,6 @@
             <div class="col-lg-6">
                 <div class="portfolio-item set-bg large-item" data-setbg="{{ asset('/img/story-1.jpg') }}">
                     <div class="pi-hover">
-                        <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
                         <a href="{{ asset('/img/story-1.jpg') }}" class="search-icon image-popup"><i
                                 class="fa fa-search"></i></a>
                     </div>
@@ -71,7 +70,6 @@
             <div class="col-lg-6">
                 <div class="portfolio-item set-bg" data-setbg="{{ asset('/img/story-2.jpg') }}">
                     <div class="pi-hover">
-                        <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
                         <a href="{{ asset('/img/story-2.jpg') }}" class="search-icon image-popup"><i
                                 class="fa fa-search"></i></a>
                     </div>
@@ -80,7 +78,6 @@
                     <div class="col-md-6">
                         <div class="portfolio-item set-bg" data-setbg="{{ asset('/img/story-3.jpg') }}">
                             <div class="pi-hover">
-                                <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
                                 <a href="{{ asset('/img/story-3.jpg') }}" class="search-icon image-popup"><i
                                         class="fa fa-search"></i></a>
                             </div>
@@ -89,7 +86,6 @@
                     <div class="col-md-6">
                         <div class="portfolio-item set-bg" data-setbg="{{ asset('/img/story-4.jpg') }}">
                             <div class="pi-hover">
-                                <a href="#" class="chain-icon"><i class="fa fa-chain"></i></a>
                                 <a href="{{ asset('/img/story-4.jpg') }}" class="search-icon image-popup"><i
                                         class="fa fa-search"></i></a>
                             </div>
@@ -172,11 +168,11 @@
             <div class="col-lg-6">
                 <div class="counter-item">
                     <div class="ci-number count">
-                        383
+                        {{ $daysTogether }}
                     </div>
                     <div class="ci-text">
                         <h4>Дней вместе</h4>
-                        <p>Наша прекрасная история началас с 23.02.2023</p>
+                        <p>Наша прекрасная история началас с {{ $startDate }}</p>
                     </div>
                 </div>
                 <div class="counter-item">

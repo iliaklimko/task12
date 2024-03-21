@@ -762,7 +762,7 @@ ol {
 }
 
 .portfolio-item .pi-hover a {
-	display: inline-block;
+	display: list-item;
 	width: 66px;
 	height: 66px;
 	background: #e32879;
