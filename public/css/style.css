@@ -757,6 +757,11 @@ ol {
 	z-index: -1;
 }
 
+.love-3 {
+    color: white;
+    font-size: 25px;
+}
+
 .portfolio-item.large-item {
 	height: 786px;
 }

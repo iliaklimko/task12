@@ -48,6 +48,44 @@
     </div>
 </section>
 
+<section class="about-us-section spad">
+    <div class="container" id="about-us">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="as-pic">
+                    <img src="{{ asset('/img/love-3.jpg') }}" alt="">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="as-text">
+                    <div class="section-title">
+                        <span class="section-2">а что я тебя люблю?</span>
+                    </div>
+                    <ul class="love-3">
+                        <li>Ты поднимаешь мне настроение.</li>
+                        <li>Ты пишешь мне милые сообщения.</li>
+                        <li>Ты хорошо целуешься.</li>
+                        <li>Ты знаешь мои вкусы.</li>
+                        <li>У тебя красивые глаза, губы и улыбка.</li>
+                        <li>Ты не перестаёшь удивлять меня.</li>
+                        <li>Каждый подарок от тебя – особенный.</li>
+                        <li>Ты прислушиваешься к моим советам.</li>
+                        <li>Ты планируешь наше совместное будущее.</li>
+                        <li>Я тону в твоих глазах.</li>
+                        <li>Ты – мое всё!</li>
+                        <li>Лучший вечер – быть рядом с тобой.</li>
+                        <li>Ты даришь мне счастье.</li>
+                        <li>Ты – мой мир.</li>
+                        <li>Ты греешь мне ноги под одеялом.</li>
+                        <li>Я хочу, чтобы мы всегда были вместе.</li>
+                        <li>Дороже тебя у меня никого нет.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="portfolio-section spad3">
     <div class="container" id="our-photos">
         <div class="row">
